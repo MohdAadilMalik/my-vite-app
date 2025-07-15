@@ -95,6 +95,14 @@ function ContactUs() {
                 </div>
                 <CardTitle>Phone</CardTitle>
               </CardHeader>
+               {/* add QR code so user can scan and call automatically simiraly as whatsapp*/}
+                 <div className="bg-white p-4 rounded-lg border inline-block mb-4">
+                  <img
+                    src={contactInfo.phone}
+                    alt="Phone QR Code"
+                    className="w-48 h-48"
+                  />
+                </div>
               <CardContent>
                 <p className="text-gray-600 mb-4">{contactInfo.phone}</p>
                 <Button variant="outline" asChild>
@@ -162,7 +170,7 @@ function ContactUs() {
               </CardContent>
             </Card>
           </div>
-
+           
           {/* Social Media Section */}
           <div>
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
@@ -209,6 +217,27 @@ function ContactUs() {
           </div>
         </div>
       </section>
+      {/*add a map section below for location show the map of the location
+      use this address direct 
+      B-150 steert no 06 , Bhagirathi vihar phase 2, New Mustafabad, New Delhi-110094, Delhi, India*/}
+      
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">  {t("location")}</h2>
+          <div className="flex justify-center">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123456!2d77.123456!3d28.567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd4b4b4b4b4b%3A0x1234567890123456!2sB-150%2C%20Steet%20No.%2006%2C%20Bhagirathi%20Vihar%20Phase%202%2C%20New%20Mustafabad%2C%20New%20Delhi-110094%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1694666666666!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      
     </div>
   );
 }

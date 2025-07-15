@@ -34,25 +34,26 @@ export interface CompanyInfo {
 }
 
 export const companyInfo: CompanyInfo = {
-  name: "My",
+  name: "A B N Heating System",
   description:
     "Your trusted partner for sustainable and eco-friendly products. We're committed to making the world a better place, one purchase at a time.",
   icon: {
     type: "text",
-    value: "E",
+    value: "ABN",
     bgColor: "bg-primary",
     textColor: "text-white",
   },
+  //H. No. 150, G/F KH .No. 1/1/2, Block-A, Gali No.5,Guru, Nanak Nagar Mustfabad, New Mustafabad, New Delhi-110094, Delhi, India
   address: {
-    street: "123 Green Street",
-    city: "San Francisco",
-    state: "CA",
-    zipCode: "94102",
-    country: "USA",
+    street: "150, G/F KH .No. 1/1/2, Block-A, Gali No.5,Guru, Nanak Nagar Mustfabad, New Mustafabad, New Delhi-110094, Delhi, India",
+    city: "New Delhi",
+    state: "Delhi",
+    zipCode: "110094",
+    country: "India",
   },
   contact: {
-    phone: "+1 (555) 123-4567",
-    email: "hello@ecoshop.com",
+    phone: "+91 8048956186",
+    email: "info@abnheatingsystem.com",
   },
   socialMedia: {
     facebook: "https://facebook.com/ecoshop",
@@ -66,5 +67,5 @@ export const companyInfo: CompanyInfo = {
     terms: "/terms",
     support: "/support",
   },
-  upiId: "ecoshop@paytm",
+  upiId: "8048956186@paytm",
 };

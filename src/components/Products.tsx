@@ -31,26 +31,31 @@ function ProductImageCarousel({
   productName,
 }: ProductImageCarouselProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imgError, setImgError] = useState(false);
+
+  // Only use local images (ignore remote URLs)
+  //const localImages = images.filter((img) => img.startsWith("/"));
 
   useEffect(() => {
     if (images.length <= 1) return;
-
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1,
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000); // Change image every 2 seconds
-
+    }, 2000);
     return () => clearInterval(interval);
   }, [images.length]);
 
   const handleImageClick = () => {
     if (images.length > 1) {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1,
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
+      setImgError(false);
     }
   };
+
+  const handleError = () => setImgError(true);
 
   return (
     <div
@@ -60,6 +65,7 @@ function ProductImageCarousel({
       <img
         src={images[currentImageIndex]}
         alt={`${productName} - Image ${currentImageIndex + 1}`}
+        onError={handleError}
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
       />
       {images.length > 1 && (
@@ -214,7 +220,7 @@ function Products() {
               >
                 <div className="aspect-square overflow-hidden rounded-t-xl relative">
                   <ProductImageCarousel
-                    images={product.images}
+                    images={product.images}//{product.images} //{["/public/myImages/bthheater/bth-heater-500x500.webp"]}
                     productName={product.name}
                   />
                   {!product.inStock && (

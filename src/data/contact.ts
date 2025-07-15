@@ -31,21 +31,21 @@ export interface ContactInfo {
     country: string;
   };
 }
-
+//add a default message to whatsapp like Hello ABN Heating System I want to buy a product.
 export const contactInfo: ContactInfo = {
   whatsapp: {
-    number: "+1-555-123-4567",
+    number: "+918048956186",
     qrCode:
-      "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/15551234567",
+      "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/+918048956186?text=Hello ABN Heating System I want to buy a product.",
   },
   socialMedia: {
     facebook: {
-      url: "https://facebook.com/ecoshop",
+      url: "https://facebook.com/abnheatingsystem",
       qrCode:
-        "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://facebook.com/ecoshop",
+        "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://facebook.com/abnheatingsystem",
     },
     twitter: {
-      url: "https://twitter.com/ecoshop",
+      url: "https://twitter.com/abnheatingsystem",
       qrCode:
         "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://twitter.com/ecoshop",
     },
@@ -60,13 +60,13 @@ export const contactInfo: ContactInfo = {
         "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://linkedin.com/company/ecoshop",
     },
   },
-  email: "hello@ecoshop.com",
-  phone: "+1 (555) 123-4567",
+  email: "info@abnheatingsystem.com",
+  phone: "+91 8048956186",
   address: {
-    street: "123 Green Street",
-    city: "San Francisco",
-    state: "CA",
-    zipCode: "94102",
-    country: "USA",
+    street: "150, G/F KH .No. 1/1/2, Block-A, Gali No.5,Guru, Nanak Nagar Mustfabad, New Mustafabad, New Delhi-110094, Delhi, India",
+    city: "New Delhi",
+    state: "Delhi",
+    zipCode: "110094",
+    country: "India",
   },
 };

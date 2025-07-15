@@ -8,6 +8,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { companyInfo } from "@/data/company";
 import ThemeSelector from "./ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
+import { Disabled } from "@/stories/checkbox.stories";
 
 function Navbar() {
   const location = useLocation();
@@ -16,10 +17,11 @@ function Navbar() {
   const { t } = useLanguage();
 
   const isActive = (path: string) => location.pathname === path;
+// what to diable about page
 
   const navLinks = [
     { path: "/", label: t("home") },
-    { path: "/about", label: t("about") },
+    // { path: "/about", label: t("about") },
     { path: "/products", label: t("products") },
     { path: "/contact", label: t("contact") },
   ];

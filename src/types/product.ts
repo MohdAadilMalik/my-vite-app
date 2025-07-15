@@ -10,4 +10,5 @@ export interface Product {
   reviews: number;
   sizes?: string[];
   sizePrices?: { [size: string]: number };
+  specifications?: { [key: string]: string | string[] };
 }
