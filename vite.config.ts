@@ -5,7 +5,7 @@ import { tempo } from "tempo-devtools/dist/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/ABNHeatingSystem/',
+  base: '/my-vite-app/',
   optimizeDeps: {
     entries: ["src/main.tsx", "src/tempobook/**/*"],
   },
